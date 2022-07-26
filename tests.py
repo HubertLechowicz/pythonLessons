@@ -17,10 +17,7 @@ class TestAddition(unittest.TestCase):
 
 class TestAppend(unittest.TestCase):
     def test_append(self):
-        self.assertEqual(append([1,2,3],[4,'text',10.9524]),[1,2,3,4,'text',10.9524])
-        # check that s.split fails when the separator is not a string
-        with self.assertRaises(AttributeError):
-            append([1,2,3],[4,'text',10.9524])
+        self.assertEqual(append([1,2,3],[4,'text',10.9524]),[[1,2,3],[4,'text',10.9524]])
 
 
 class TestString(unittest.TestCase):

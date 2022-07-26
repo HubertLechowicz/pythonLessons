@@ -20,7 +20,7 @@ def append(*my_arguments):
     result = []
     try:
         for element in my_arguments:
-            element.append(element)
+            result.append(element)
     except Exception as e:
         print(e)
         result = 'FAIL'
