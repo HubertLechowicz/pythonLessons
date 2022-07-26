@@ -1,5 +1,5 @@
 import unittest
-from functions import additions,append
+from functions import additions,append,extend
 class TestAddition(unittest.TestCase):
 
     def test_integer_to_integer(self):
@@ -14,10 +14,17 @@ class TestAddition(unittest.TestCase):
         self.assertEqual(additions(1,{4,5,2}), 'FAIL')
     def test_integer_to_dict(self):
         self.assertEqual(additions(1,{"key":"value"}), 'FAIL')
+    def test_dodawanie_wiele_integerow(self):
+        self.assertEqual(additions(2,4,5,7), 18)
 
 class TestAppend(unittest.TestCase):
     def test_append(self):
         self.assertEqual(append([1,2,3],[4,'text',10.9524]),[[1,2,3],[4,'text',10.9524]])
+
+class TestExtend(unittest.TestCase):
+    def test_extend(self):
+        self.assertEqual(extend([1,2,3],[4,'text',10.9524]),[1,2,3,4,'text',10.9524])
+
 
 
 class TestString(unittest.TestCase):
