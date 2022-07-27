@@ -26,3 +26,17 @@ def append(*my_arguments):
         result = 'FAIL'
     return result
 
+def extend(*my_arguments):
+    '''
+    :param any number of arguments:
+    :return: appended all arguments
+    '''
+    result = []
+    try:
+        for element in my_arguments:
+            result.extend(element)
+    except Exception as e:
+        print(e)
+        result = 'FAIL'
+    return result
+
